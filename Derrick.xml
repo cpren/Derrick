@@ -10,7 +10,7 @@
         <field name="VAR">Light</field>
         <value name="VALUE">
           <block type="math_number" id="50">
-            <field name="NUM">1</field>
+            <field name="NUM">0</field>
           </block>
         </value>
         <next>
