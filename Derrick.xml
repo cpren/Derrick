@@ -1,1 +1,79 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="43" inline="true" x="-4" y="-16">
+    <field name="VAR">Light</field>
+    <value name="VALUE">
+      <block type="math_number" id="50">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="41" inline="false">
+        <field name="MODE">UNTIL</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="123" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="127">
+                <field name="VAR">Light</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="134">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="led_select" id="18" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="variables_get" id="60">
+                <field name="VAR">Light</field>
+              </block>
+            </value>
+            <next>
+              <block type="robot_delay" id="136" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="143">
+                    <field name="NUM">250</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="led_select" id="152" inline="true">
+                    <field name="ACTION">OFF</field>
+                    <value name="LED">
+                      <block type="variables_get" id="156">
+                        <field name="VAR">Light</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="160" inline="true">
+                        <field name="VAR">Light</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="167" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id="178">
+                                <field name="VAR">Light</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="174">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
