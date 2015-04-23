@@ -232,14 +232,4 @@
       </block>
     </next>
   </block>
-  <block type="controls_repeat" id="185" inline="true" x="395" y="-72">
-    <value name="TIMES">
-      <block type="math_number" id="192">
-        <field name="NUM">3</field>
-      </block>
-    </value>
-    <next>
-      <block type="movement_stop" id="203"></block>
-    </next>
-  </block>
 </xml>
